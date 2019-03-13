@@ -17,7 +17,7 @@ class Personaggio {
   PShape shape;
   int x=width/10;
   int y=height/2;
-  int xron = 150;
+  int xron = 5;
   Personaggio(String filename) {
     shape = loadShape(filename);
     shape.setFill(color(#FF0000));
@@ -38,14 +38,14 @@ void setup() {
 }
 
 void draw() {
-  background(000000);
+  background(#000000);
 
   lights();
-  castello.disegna(width/10*9, height/2);
+  castello.disegna(width*0.9, height*0.5);
 
   ron.disegna();
 
-  if (ron.x < width/10*9) {
+  if (ron.x < width*0.9) {
     ron.x=ron.x + ron.xron;
   }
 }
